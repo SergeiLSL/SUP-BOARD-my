@@ -1,0 +1,242 @@
+//====================================================================================================
+.header {
+	position: relative;
+	text-align: center;
+	color: #fff;
+
+	// .header__foto
+	&__foto {
+	}
+
+	// .header__bg
+	&__bg {
+		width: 100%;
+	}
+
+	// .header__decors
+	&__decors {
+		width: 100%;
+	}
+
+	// .header__decors
+	&__decors-block {
+		position: absolute;
+		top: 70%;
+	}
+
+	// .header__decor--top
+	&__decors--top {
+		//transform: translateY(15%);
+	}
+
+	// .header__decor--bottom
+	&__decors--bottom {
+		transform: translateY(-80%) rotate(180deg);
+	}
+
+	// .header__container
+	&__container {
+		//position: relative;
+	}
+
+	// .header__top
+	&__top {
+		position: absolute;
+		top: 0.06%;
+		left: 50%;
+		display: flex;
+		align-items: center;
+		//padding: rem(57) 0;
+		@include adaptiveValue("padding-top", 57, 20, 1920, 1200, 1);
+		@include adaptiveValue("padding-bottom", 57, 20, 1920, 1200, 1);
+		gap: rem(100);
+		justify-content: flex-end;
+		font-family: "Comfortaa", cursive;
+		font-size: rem(20);
+		line-height: math.div(22, 20);
+		color: $mainColor;
+		// margin-bottom: rem(210);
+	}
+
+	// .header__logo
+	&__logo {
+		transition: fill 0.3s ease;
+		:hover path {
+			fill: $mainBody;
+			transition: fill 0.3s ease;
+		}
+	}
+
+	// .header__btn
+	&__btn {
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #ffffff;
+		padding: rem(12) rem(71);
+		background-color: $mainColor;
+		border: none;
+		cursor: pointer;
+	}
+
+	// .header__phone
+
+	&__phone {
+		font-weight: 700;
+	}
+
+	// .header__content
+	&__content {
+		position: absolute;
+		left: 51%;
+		top: 42%;
+	}
+
+	// .header__content-box
+	&__content-box {
+		// position: relative;
+		font-family: "Comfortaa", cursive;
+		font-weight: 700;
+		max-width: rem(550);
+		text-align: center;
+		margin-right: rem(30);
+		color: #fff;
+	}
+
+	// .header__title
+	&__title {
+		text-transform: uppercase;
+		// font-size: rem(64);
+		line-height: math.div(71, 64);
+		margin-bottom: rem(20);
+		@include adaptiveValue("font-size", 64, 32, 1920, 960, 1);
+	}
+
+	// .header__text
+	&__text {
+		font-size: rem(24);
+		@include adaptiveValue("font-size", 24, 14, 1920, 960, 1);
+		line-height: math.div(27, 24);
+		&:not(:last-child) {
+			//margin-bottom: 20px;
+			@include adaptiveValue("margin-bottom", 20, 10, 1920, 1200, 1);
+		}
+		margin-bottom: rem(120);
+		@include adaptiveValue("margin-bottom", 120, 0, 1920, 1200, 1);
+	}
+	// .header__decor
+	&__decor {
+		//max-width: rem(850);
+		position: absolute;
+		left: 51%;
+		//top: 42%;
+		top: 77%;
+		//display: flex;
+		font-family: "Comfortaa", cursive;
+	}
+
+	// .header__decor-text
+	&__decor-text {
+		position: relative;
+		// position: absolute;
+		// bottom: rem(-120);
+		font-size: rem(130);
+		@include adaptiveValue("font-size", 130, 48, 1920, 1200, 1);
+		line-height: math.div(145, 130);
+		opacity: 0.3;
+		right: rem(145);
+		color: $mainBody;
+		//background-color: #fff;
+	}
+	// .header__decor-row
+	&__decor-row {
+		display: flex;
+		//justify-content: space-between;
+	}
+
+	// .header__decor-text--one
+	&__decor-text--one {
+		left: rem(150);
+		@include adaptiveValue("left", 150, 0, 1920, 1200, 1);
+		max-width: rem(345);
+	}
+
+	// .header__decor-text--two
+	&__decor-text--two {
+		//left: rem(-350);
+		@include adaptiveValue("left", -480, -100, 1920, 1200, 1);
+		// @include adaptiveValue("padding-left", 280, 100);
+	}
+
+	// .header__decor-text--three
+	&__decor-text--three {
+		// position: absolute;
+		font-family: "Inter", sans-serif;
+		left: -28%;
+		@include adaptiveValue("left", -180, -30, 1920, 1200, 1);
+		z-index: 4;
+		right: rem(145);
+		max-width: rem(360);
+		@include adaptiveValue("max-width", 360, 180, 1920, 1200, 1);
+		font-weight: 300;
+		font-size: rem(32);
+		@include adaptiveValue("font-size", 32, 16, 1920, 1200, 1);
+		line-height: math.div(39, 32);
+		font-style: italic;
+		text-align: center;
+		padding-top: 5%;
+		opacity: 1;
+	}
+}
+
+//====================================================================================================
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/

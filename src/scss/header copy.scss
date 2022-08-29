@@ -1,0 +1,213 @@
+//====================================================================================================
+.header {
+	background-image: url("@img/header/header-bg.jpg");
+	background-size: cover; //чтобы растягивалась
+	background-repeat: no-repeat; //чтобы не повторялась
+	min-height: 100vh;
+	background-position: center;
+	position: relative;
+	::before {
+		content: "";
+		position: absolute;
+		background-image: url("@img/header/header-decor.svg");
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: rem(456);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		transform: translateY(35%);
+		z-index: 2;
+	}
+	::after {
+		content: "";
+		position: absolute;
+		background-image: url("@img/header/header-decor.svg");
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: rem(456);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		transform: translateY(75%) rotate(180deg);
+		z-index: 3;
+	}
+	// .header__container
+	&__container {
+	}
+
+	// .header__top
+	&__top {
+		display: flex;
+		align-items: center;
+		padding: rem(57) 0;
+		gap: rem(100);
+		justify-content: flex-end;
+		font-family: "Comfortaa", cursive;
+
+		font-size: rem(20);
+		line-height: math.div(22, 20);
+		margin-bottom: rem(210);
+	}
+
+	// .header__logo
+	&__logo {
+		transition: fill 0.3s ease;
+		:hover path {
+			fill: $mainBody;
+			transition: fill 0.3s ease;
+		}
+	}
+
+	// .header__btn
+	&__btn {
+		text-transform: uppercase;
+		font-weight: 700;
+		color: #ffffff;
+		padding: rem(12) rem(71);
+		background-color: $mainColor;
+		border: none;
+		cursor: pointer;
+	}
+
+	// .header__phone
+	&__phone {
+		font-weight: 700;
+	}
+}
+
+.header {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	// .content__decor-text
+	&__decor-text {
+		position: absolut;
+		bottom: 0;
+		font-size: rem(130);
+		line-height: math.div(145, 130);
+		color: $mainBody;
+		font-family: "Comfortaa", cursive;
+		// color: #ffffff;
+	}
+	// .header__content
+	&__content {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+	}
+	// .header__content-box
+	&__content-box {
+		font-family: "Comfortaa", cursive;
+		font-weight: 700;
+		max-width: rem(550);
+		text-align: center;
+		margin-right: rem(30);
+		color: #ffffff;
+	}
+	// .header__title
+	&__title {
+		text-transform: uppercase;
+		font-size: rem(64);
+		line-height: math.div(71, 64);
+		margin-bottom: rem(20);
+	}
+	// .header__text
+	&__text {
+		font-size: rem(24);
+		line-height: math.div(27, 24);
+		margin-bottom: rem(10);
+	}
+
+	&__decor-text {
+		position: absolute;
+		bottom: 0;
+
+	}
+	// .header__decor-text--one
+	&__decor-text--one {
+		z-index: 1;
+		font-size: rem(130);
+		line-height: math.div(145, 130);
+		opacity: 0.3;
+		right: rem(145);
+	}
+	// .header__decor-text--two
+
+	&__decor-text--two {
+		opacity: 0.3;
+		z-index: 4;
+		left: rem(265);
+		bottom: 0;
+	}
+	// .header__decor-text--three
+	&__decor-text--three {
+		max-width: rem(360);
+		right: rem(145);
+		bottom: rem(20);
+		font-weight: 300;
+		font-size: rem(32);
+		line-height: math.div(39, 32);
+		z-index: 5;
+		font-style: italic;
+		text-align: center;
+	}
+}
+
+
+//====================================================================================================
+
+//Burger
+/*
+.icon-menu {
+	display: none;
+	@media (max-width: $mobile) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		cursor: pointer;
+		z-index: 5;
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #000;
+		}
+		&::before {
+			top: 0;
+		}
+		&::after {
+			bottom: 0;
+		}
+		span {
+			top: calc(50% - rem(1));
+		}
+		.menu-open & {
+			span {
+				width: 0;
+			}
+			&::before,
+			&::after {
+			}
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}
+*/
